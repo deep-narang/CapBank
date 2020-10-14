@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+- Transactions
+{% endblock %}
+
+{% block main %}
+
+{% with messages= get_flashed_messages()  %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-danger" role="alert">
+  {{message}}
+</div>
+
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<h3>Welcome {{lable[0][2]}}.</h3>
+<h4>Account Number: {{lable[0][1]}}</h4>
+<h4>Amount Available: Rs {{lable[0][4]}}/-</h4>
+<br>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Description</th>
+        <th scope="col">Type</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date and Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        {% for col in data %}
+        <tr>
+          <td>{{col[2]}}</td>
+          <td>{{col[3]}}</td>
+          <td>{{col[4]}}</td>
+          <td>{{col[5]}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+    </table>
+
+{% endblock %}

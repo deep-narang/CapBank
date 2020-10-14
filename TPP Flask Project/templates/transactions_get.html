@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+- Transactions
+{% endblock %}
+
+{% block main %}
+
+{% with messages= get_flashed_messages()  %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-danger" role="alert">
+  {{message}}
+</div>
+
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form method="post" action="/transactions" >
+
+  <div class="form-group">
+      <input autocomplete="off" autofocus class="form-control" name="account_no" placeholder="Account Number" type="text"/>
+  </div>
+   
+  <button class="btn btn-primary" type="submit">View Transactions</button>
+</form>
+
+{% endblock %}

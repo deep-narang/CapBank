@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <link href="/static/styles.css" rel="stylesheet"/>
+        <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+
+        <title>Capital Bank</title>
+
+    </head>
+
+    <body>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="/static/images/download.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            Capital Bank
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a></a>
+            <a class="nav-link" href="/register">Register</a>
+          </div>
+        </div>
+      </nav> 
+
+      {% with messages= get_flashed_messages()  %}
+      {% if messages %}
+      {% for message in messages %}
+      
+      <div class="col-sm-10 offset-sm-1 text-center">
+      <div class="alert alert-info" role="alert">
+        {{message}}
+      </div>
+    </div>
+      
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+
+      <div >
+        <img class="img-fluid" src="/static/images/cover.jpg">
+      </div>
+
+      <br>
+      <div class="col-sm-10 offset-sm-1 text-center">
+        <p class="lead">
+          <h4>
+          Capital Bank is an Indian multinational, private sector banking and financial services statutory body headquartered in Landran, Mohali. CAPITAL BANK is ranked 500th in the Fortune Global 500 list of the world's biggest corporations of 2020. A nationalised bank, it is the largest in India with a 24% market share by assets and a 21% share of the total loan and deposits market.
+          The bank descends from the Bank of Landran, founded in 1806 via the CPI Bank, making it the oldest commercial bank in the Indian subcontinent. 
+        </h4>
+        </p>
+    </div>
+
+    
+    <br>
+    <div class="col-sm-10 offset-sm-1 text-center">
+    <h4>
+      Features:
+    </h4>
+    <ul class="list-group">
+      <li class="list-group-item">24x7 Banking</li>
+      <li class="list-group-item">Loan Available</li>
+      <li class="list-group-item">High Interest Rate</li>
+      <li class="list-group-item">Saving Bank Account</li>
+      <li class="list-group-item">Online Application Available </li>
+    </ul>
+  <br>
+<br>
+
+<footer>
+  <div class="alert alert-info" role="alert">
+    © Deepanshu Narang, 1802328, ECE-Y
+  </div>
+</div>
+</footer>
+
+
+
+
+      
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
+    </body>
+
+</html>
