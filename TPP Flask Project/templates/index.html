@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+- Index 
+{% endblock %}
+
+{% block main %}
+
+{% with meassages= get_flashed_messages()  %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-info" role="alert">
+  {{message}}
+</div>
+
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<h3>Hello, {{name}}! How may I assist you?</h3>
+
+
+{% endblock %}
